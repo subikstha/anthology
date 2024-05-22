@@ -14,12 +14,12 @@ export const Button = ({
   className,
   ...props
 }: ButtonProps) => {
-  // let className = clsx(
-  //   styles.button,
-  //   variant === 'primary' && styles.primary,
-  //   variant === 'secondary' && styles.secondary,
-  //   variant === 'destructive' && styles.destructive,
-  // );
-  let classes = clsx(styles.button, styles[variant], styles[size], className);
+  let classes = clsx(
+    'bg-indigo-600 hover:bg-indigo-200',
+    styles.button,
+    styles[variant],
+    styles[size],
+    className,
+  );
   return <button className={classes} {...props} />;
 };
